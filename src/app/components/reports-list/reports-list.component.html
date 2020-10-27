@@ -27,7 +27,7 @@
         [class.active]="i == currentIndex"
         (click)="setActiveReport(report, i)"
       >
-        {{ report.title }}
+        {{ report.nickname }}
       </li>
     </ul>
     <!-- <button class="m-3 btn btn-sm btn-danger" (click)="removeAllReports()">
@@ -38,7 +38,7 @@
     <div *ngIf="currentReport">
       <h4>Nickname</h4>
       <div>
-        <label><strong>Nickname:</strong></label> {{ currentReport.title }}
+        <label><strong>Nickname:</strong></label> {{ currentReport.nickname }}
       </div>
       <div>
         <label><strong>Avatar:</strong></label>
