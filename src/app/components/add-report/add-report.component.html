@@ -1,0 +1,35 @@
+<div style="width: 400px; margin: auto;">
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="nickname">Nickname</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nickname"
+          required
+          [(ngModel)]="report.nickname"
+          name="nickname"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="avatar">Avatar</label>
+        <input
+          class="form-control"
+          id="avatar"
+          required
+          [(ngModel)]="report.avatar"
+          name="avatar"
+        />
+      </div>
+
+      <button (click)="saveReport()" class="btn btn-success">Submit</button>
+    </div>
+
+    <div *ngIf="submitted">
+      <h4>You submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newReport()">Add</button>
+    </div>
+  </div>
+</div>

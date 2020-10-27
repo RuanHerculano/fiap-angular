@@ -1,0 +1,62 @@
+<div class="list row">
+  <!-- <div class="col-md-8">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by title"
+        [(ngModel)]="title"
+      />
+      <div class="input-group-append">
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          (click)="searchTitle()"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  </div> -->
+  <div class="col-md-6">
+    <h4>Reports List</h4>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let report of reports; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveReport(report, i)"
+      >
+        {{ report.title }}
+      </li>
+    </ul>
+    <!-- <button class="m-3 btn btn-sm btn-danger" (click)="removeAllReports()">
+      Remove All
+    </button> -->
+  </div>
+  <div class="col-md-6">
+    <div *ngIf="currentReport">
+      <h4>Nickname</h4>
+      <div>
+        <label><strong>Nickname:</strong></label> {{ currentReport.title }}
+      </div>
+      <div>
+        <label><strong>Avatar:</strong></label>
+        {{ currentReport.avatar }}
+      </div>
+      <div>
+        <label><strong>Nível de similaridade:</strong></label>
+        {{ currentReport.similarityLevel }}
+      </div>
+
+      <a class="badge badge-warning" routerLink="/reports/{{ currentReport.id }}">
+        Edit
+      </a>
+    </div>
+
+    <div *ngIf="!currentReport">
+      <br />
+      <p>Please click on a Report...</p>
+    </div>
+  </div>
+</div>
