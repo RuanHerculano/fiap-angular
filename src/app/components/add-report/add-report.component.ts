@@ -22,7 +22,8 @@ export class AddReportComponent implements OnInit {
   saveReport(): void {
     const data = {
       nickname: this.report.nickname,
-      avatar: this.report.avatar
+      avatar: this.report.avatar,
+      similarityLevel: 0
     };
 
     this.reportService.create(data)
