@@ -50,7 +50,7 @@ export class ReportDetailsComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
-          this.router.navigate(['/tutorials']);
+          this.router.navigate(['/reports']);
         },
         error => {
           console.log(error);
