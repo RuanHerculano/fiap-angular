@@ -37,7 +37,7 @@ export class ReportsListComponent implements OnInit {
     this.currentIndex = -1;
   }
 
-  setActiveTutorial(report, index): void {
+  setActiveReport(report, index): void {
     this.currentReport = report;
     this.currentIndex = index;
   }

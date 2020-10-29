@@ -24,37 +24,30 @@
       </div>
 
       <div class="form-group">
-        <label><strong>Status:</strong></label>
-        {{ currentReport.published ? "Published" : "Pending" }}
+        <label for="similarity-level">Similarity Level</label>
+        <input
+          type="text"
+          class="form-control"
+          id="similarity-level"
+          [(ngModel)]="currentReport.similarityLevel"
+          name="similarityLevel"
+        />
       </div>
     </form>
 
     <button
-      class="badge badge-primary mr-2"
-      *ngIf="currentReport.similarityLevel"
-      (click)="updateReport(false)"
-    >
-      UnPublish
-    </button>
-    <button
-      *ngIf="!currentReport.similarityLevel"
-      class="badge badge-primary mr-2"
-      (click)="updateReport(true)"
-    >
-      Publish
-    </button>
-
-    <button class="badge badge-danger mr-2" (click)="deleteReport()">
-      Delete
-    </button>
-
-    <button
       type="submit"
-      class="badge badge-success"
+      class="btn btn-primary mr-2"
       (click)="updateReport()"
     >
       Update
     </button>
+
+
+    <button class="btn btn-danger" (click)="deleteReport()">
+      Delete
+    </button>
+
     <p>{{ message }}</p>
   </div>
 
