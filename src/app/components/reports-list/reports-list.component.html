@@ -30,9 +30,6 @@
         {{ report.nickname }}
       </li>
     </ul>
-    <!-- <button class="m-3 btn btn-sm btn-danger" (click)="removeAllReports()">
-      Remove All
-    </button> -->
   </div>
   <div class="col-md-6">
     <div *ngIf="currentReport">
@@ -45,11 +42,11 @@
         {{ currentReport.avatar }}
       </div>
       <div>
-        <label><strong>Nível de similaridade:</strong></label>
-        {{ currentReport.similarityLevel }}
+        <label><strong>Similarity Level:</strong></label>
+        {{ levels[currentReport.similarityLevel] }}
       </div>
 
-      <a class="badge badge-warning" routerLink="/reports/{{ currentReport.id }}">
+      <a class="btn btn-primary" routerLink="/reports/{{ currentReport.id }}">
         Edit
       </a>
     </div>

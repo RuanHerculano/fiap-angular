@@ -7,7 +7,7 @@ import { ReportService } from 'src/app/services/report.service';
   styleUrls: ['./reports-list.component.css']
 })
 export class ReportsListComponent implements OnInit {
-
+  levels = ['Low', 'Medium', 'High'];
   reports: any;
   currentReport = null;
   currentIndex = -1;
